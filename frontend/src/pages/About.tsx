@@ -15,7 +15,7 @@ const About = () => {
           <div className="container mx-auto max-w-4xl">
             <AnimatedContainer animation="slideUp" className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-                About <TextAnimation text="LegalLingo" type="gradient" />
+                About <TextAnimation text="Signed & Trapped" type="gradient" />
               </h1>
               <p className="text-xl text-muted-foreground">
                 We're transforming how people understand legal documents through the power of advanced artificial intelligence.

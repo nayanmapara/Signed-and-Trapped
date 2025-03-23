@@ -197,17 +197,17 @@ const Index = () => {
               {[
                 {
                   quote: "I used to spend hours trying to understand contract terms. This tool has cut that time down to minutes while improving my understanding.",
-                  author: "Sarah M.",
+                  author: "Deep",
                   role: "Small Business Owner"
                 },
                 {
                   quote: "As a non-lawyer, legal documents were always intimidating. This AI tool explains everything clearly and highlights what I should pay attention to.",
-                  author: "Michael T.",
+                  author: "Nayan",
                   role: "Real Estate Agent"
                 },
                 {
                   quote: "The quality scoring feature helps me quickly assess if a document requires more detailed review from our legal team.",
-                  author: "Jennifer K.",
+                  author: "Meet",
                   role: "HR Director"
                 }
               ].map((testimonial, index) => (
@@ -266,7 +266,7 @@ const Index = () => {
                   }
                 ].map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="border rounded-lg px-4 mb-4 border-white/10">
-                    <AccordionTrigger className="text-left py-5 hover:no-underline">
+                    <AccordionTrigger className="text-left text-lg py-5 hover:no-underline">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground pb-5">

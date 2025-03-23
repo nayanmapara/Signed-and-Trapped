@@ -69,7 +69,7 @@ const DocumentUploader = ({ onFileUpload }: DocumentUploaderProps) => {
       formData.append('file', file);
       
       // Send file to backend
-      const response = await fetch('http://localhost:5000/upload', {
+      const response = await fetch('https://dfaa-138-51-67-3.ngrok-free.app/upload', {
         method: 'POST',
         body: formData,
       });

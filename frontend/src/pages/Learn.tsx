@@ -11,23 +11,31 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 const Learn = () => {
   return (
     <div className="min-h-screen bg-background pt-24 pb-16">
-      <AnimatedContainer 
-        className="container mx-auto px-4 max-w-6xl"
-        animation="fadeIn"
-      >
-        <div className="text-center mb-16">
-          <TextAnimation 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
-            text="Choose Your Learning Style"
-            type="letters"
-            delay={0.2}
-          />
-          <TextAnimation 
-            className="text-xl text-muted-foreground max-w-3xl mx-auto"
-            text="Select the method that works best for you. Learn through interactive games or video content."
-            delay={0.5}
-          />
-        </div>
+  <AnimatedContainer 
+    className="container mx-auto px-4 max-w-6xl"
+    animation="fadeIn"
+  >
+    <div className="text-center mb-16">
+      <TextAnimation 
+        className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+        text="Choose Your Learning Style"
+        type="letters"
+        delay={0.2}
+      />
+      <div className="text-xl text-muted-foreground max-w-3xl mx-auto">
+        <TextAnimation 
+          className="block"
+          text="Select the method that works"
+          delay={0.5}
+        />
+        <TextAnimation 
+          className="block"
+          text="best for you. Learn through interactive games or video content."
+          delay={0.7}
+        />
+      </div>
+    </div>
+
 
         <Tabs defaultValue="options" className="w-full">
           <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12">
@@ -115,20 +123,6 @@ const Learn = () => {
             </div>
           </TabsContent>
         </Tabs>
-
-        <div className="mt-16 bg-primary/5 rounded-2xl p-8 border border-primary/10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-left max-w-xl">
-              <h3 className="text-2xl font-bold mb-4">Not sure which to choose?</h3>
-              <p className="text-muted-foreground">
-                We recommend trying both learning methods and sticking with the one that feels most effective for you. Different concepts might be easier to learn with different approaches.
-              </p>
-            </div>
-            <Button size="lg" className="rounded-full px-8">
-              Take Learning Style Quiz
-            </Button>
-          </div>
-        </div>
       </AnimatedContainer>
     </div>
   );
