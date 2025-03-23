@@ -113,14 +113,7 @@ PINECONE_ENV=your_environment
 ## 📊 API Endpoints
 
 ### Document Analysis
-- `POST /api/documents/analyze`
-- `GET /api/documents/{id}/results`
-- `GET /api/documents/similar/{id}`
-
-### User Management
-- `POST /api/auth/register`
-- `POST /api/auth/login`
-- `GET /api/user/history`
+- `POST /upload`
 
 ## 🤝 Contributing
 1. Fork the repository
