@@ -69,7 +69,7 @@ const DocumentUploader = ({ onFileUpload }: DocumentUploaderProps) => {
       formData.append('file', file);
       
       // Send file to backend
-      const response = await fetch('http://localhost:5000/upload', {
+      const response = await fetch('https://backend-x43fyvkn5q-uc.a.run.app/upload', {
         method: 'POST',
         body: formData,
       });
