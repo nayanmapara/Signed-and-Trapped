@@ -7,13 +7,13 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="col-span-1 md:col-span-2">
           <Link to="/" className="inline-block mb-6">
-            <span className="text-xl font-bold text-gradient">LegalLingo</span>
+            <span className="text-xl font-bold text-gradient">Signed & Trapped</span>
           </Link>
           <p className="text-muted-foreground max-w-md mb-6">
             Simplify legal documents with AI-powered analysis. Get clear explanations, key insights, and quality assessment in seconds.
           </p>
           <div className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} LegalLingo. All rights reserved.
+            © {new Date().getFullYear()} Signed & Trapped. All rights reserved.
           </div>
         </div>
         

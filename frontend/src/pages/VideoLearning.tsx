@@ -13,28 +13,24 @@ const videos = [
     title: "Contract Law Explained",
     description: "Learn the fundamentals of contract law and key principles.",
     src: "https://www.youtube.com/embed/t2gDUbxq3cY",
-    duration: "5:20"
   },
   {
     id: 2,
     title: "Understanding Tort Law",
     description: "Essential concepts of tort law explained simply.",
     src: "https://www.youtube.com/embed/iFLrYZPHiN4",
-    duration: "4:15"
   },
   {
     id: 3,
     title: "Property Law Basics",
     description: "Key principles of property ownership and rights.",
     src: "https://www.youtube.com/embed/-XJH4GlgVMY", 
-    duration: "3:45"
   },
   {
     id: 4,
     title: "Criminal Law Fundamentals",
     description: "Understanding the basics of criminal law and procedure.",
     src: "https://www.youtube.com/embed/rVSveWMd06A",
-    duration: "6:10"
   }
 ];
 

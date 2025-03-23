@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className="container mx-auto">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-gradient font-display">LegalLingo</span>
+              <span className="text-2xl font-bold text-gradient font-display">Signed & Trapped </span>
             </Link>
             
             <nav className="hidden md:flex items-center space-x-8">
