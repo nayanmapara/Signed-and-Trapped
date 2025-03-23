@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 255 92% 76%;
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    
+    --accent: 260 75% 60%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 250 95% 76%;
+    
+    --radius: 0.75rem;
+    
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 255 92% 76%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border selection:bg-accent/20 selection:text-accent-foreground;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden font-body;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight font-semibold;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  h5 {
+    @apply text-lg md:text-xl;
+  }
+  
+  h6 {
+    @apply text-base md:text-lg;
+  }
+  
+  p {
+    @apply text-base leading-relaxed;
+  }
+  
+  .subtitle {
+    @apply text-muted-foreground font-normal;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .glass-morphism {
+    @apply backdrop-blur-xl bg-white/[0.03] border border-white/10 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.1)];
+  }
+  
+  .neo-blur {
+    @apply backdrop-blur-2xl bg-black/40 border border-white/[0.03];
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-br from-white via-white/90 to-white/70 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary via-accent to-primary/80 bg-clip-text text-transparent;
+  }
+  
+  .animated-border {
+    @apply relative;
+    background: linear-gradient(#131418, #131418) padding-box,
+      linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent))) border-box;
+    border: 1px solid transparent;
+  }
+  
+  .shimmer {
+    @apply relative overflow-hidden;
+  }
+  
+  .shimmer::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full -translate-x-full;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.03),
+      transparent
+    );
+    animation: shimmer 2s infinite;
+  }
+}
+
+/* Document upload and progress styles */
+.upload-zone {
+  @apply relative flex flex-col items-center justify-center w-full rounded-lg border-2 border-dashed border-border bg-secondary/30 p-12 transition-all hover:bg-secondary/50;
+}
+
+.upload-zone.active {
+  @apply border-primary/60 bg-primary/5;
+}
+
+/* Score card styles */
+.score-ring {
+  @apply relative flex items-center justify-center rounded-full;
+  background: conic-gradient(
+    hsl(var(--primary)) calc(var(--score) * 1%),
+    hsl(var(--secondary)) 0%
+  );
+}
+
+/* Page transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
